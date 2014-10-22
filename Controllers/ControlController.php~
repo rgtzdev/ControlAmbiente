@@ -1,0 +1,16 @@
+<?php
+
+	require_once( $_SERVER['DOCUMENT_ROOT'].'/Prototipos/ControlAmbiente/Models/Control.php' );
+
+	class ControlController{
+
+	      public static function GetFanStatus(){
+
+	      	     $c = new Control;
+		     $rContriol = json_decode( $c->getByAttr_json( 'descripcion', 'fan' ), true );
+		     return $rControl['valor'];
+
+	      }//End of GetFanStatus Method
+
+	}//End of ControlController Class
+?>
